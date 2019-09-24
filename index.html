@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="eng">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>CRYSTAL COLLECTOR GAME</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="assets/css/reset.css">
+        <link rel="stylesheet" href="assets/css/style.css">
+        <link
+            href="https://fonts.googleapis.com/css?family=Monoton&display=swap"
+            rel="stylesheet">
+        <script
+            src="https://code.jquery.com/jquery-3.4.1.min.js"
+            integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="crossorigin="anonymous"></script>
+    </head>
+
+    <body id="body">
+        <!--Heading/Top Of Page-->
+        <div class="heading">
+            <h1>Crystal Collector!</h1>
+        </div>
+        <!--Page/Game Background/Everything in this div is part of the game-->
+        <div class="background">
+            <!--Introduction/Instructions-->
+            <div class="instruction-container">
+                <p>You will be given a random number at the start of the game.</p>
+                <p>There are four crystals below. By clicking on a crystal you
+                    will add a specific amount of points to your total score.</p>
+                <p>You win the game by matching your total score to random
+                    number, you lose the game if your total score goes above the
+                    random number.</p>
+                <p>The value of each crystal is hidden from you until you click
+                    on it.</p>
+                <p>Each time when the game starts, the game will change the
+                    value of the crystals.</p>
+            </div>
+
+            <script src="assets/javascript/game.js" rel="stylesheet"></script>
+            <!--Crystal Buttons-->
+
+            <div id=crystals>
+                <button class="red crystal"> <img
+                        src="assets/images/redcrystal.jpg" height="80px"
+                        width="80px"></button>
+                <button class="green crystal"><img
+                        src="assets/images/greencrystal.jpg" height="80px"
+                        width="80px"></button>
+                <button class="blue crystal"><img
+                        src="assets/images/bluecrystal.jpg" height="80px"
+                        width="80px"></button>
+                <button class="yellow crystal"><img
+                        src="assets/images/yellowcrystal.jpg" height="80px"
+                        width="80px"></button>
+            </div>
+
+
+            <!--Row with random number appears-->
+            <div id="random-number">
+                <h3>Random number:</h3>
+                <h3 id="computerGuess"></h3>
+            </div>
+
+            <!--Wins & Losses-->
+            <div id=score>
+                <div id="results"></div>
+                <div>
+                    <h3>Wins: <span id="wins">0</span></h3>
+
+                </div>
+                <div>
+                    <h3>Losses: <span id="lose">0</span></h3>
+
+                </div>
+            </div>
+            <div id=score>
+                <h3>Your Total Score:</h3>
+                <h3 id="showscore"></h3>
+
+            </div>
+
+
+
+        </div>
+    </body>
+
+</html>
