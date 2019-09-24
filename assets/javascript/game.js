@@ -1,8 +1,8 @@
 $(document).ready(function() {
-    //declare variables for computerGuess, win , loss and all four crystals
+    
     var win=0;
     var loss=0;
-    //function that resets the value of crystals, player's score and compGuess
+    
     function init() {
          compGuess=0;
          userScore=0;
@@ -12,7 +12,7 @@ $(document).ready(function() {
          yellowCrystal=0;
          userScore=0;
          
-        compGuess= Math.floor(Math.random() * 102) + 19;
+        compGuess= Math.floor(Math.random() * 120) + 19;
         console.log(compGuess);
         $('#computerGuess').html(compGuess);
     
@@ -38,10 +38,7 @@ $(document).ready(function() {
     init();
     
         $('.crystal').click(function play(){
-             var audio= document.createElement('audio');
-                audio.setAttribute('src', 'assets/sounds/click.mp3');
-             audio.play();
-    
+             
             if($(this).hasClass('crystal')){
                 score=parseInt($(this).attr('value'));
                 userScore+=score;
@@ -49,21 +46,21 @@ $(document).ready(function() {
     
             if(userScore===compGuess){
                  var audio= document.createElement('audio');
-                     audio.setAttribute('src', 'assets/sounds/winsound.mp3');
+                     audio.setAttribute('src', 'assets/audio/you-win-sound-effect.mp3');
                  audio.play();
                     win++;
     
                  $('#wins').html(win);
-                 $('status').html('Yay you win!!');
+                
                  init();
                 
             }else if(userScore>compGuess){
                 loss++;
                  var audio= document.createElement('audio');
-                    audio.setAttribute('src', 'assets/sounds/loosesound.mp3');
+                    audio.setAttribute('src', 'assets/audio/Lose-sound-effects.mp3');
                   audio.play();
                  $('#lose').html(loss);
-                 $('status').html('Oops!! You loose!!');
+                 
                  init();
                 }
             }
