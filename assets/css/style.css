@@ -82,3 +82,21 @@ h1 {
 	clear: right;
     box-shadow: 1px 1px 2px rgb(179, 15, 129), 0 0 25px rgb(218, 81, 195), 0 0 5px rgb(200, 69, 212);
 }
+
+#musicControls {
+    padding-top: 7%;
+    float: right;
+    padding-right: 2%;
+}
+
+#playtheme {
+    background-color: rgb(132, 177, 223);
+}
+
+#pausetheme {
+    background-color: rgb(167, 124, 196);
+}
+
+span {
+    font-size: 20px;
+}

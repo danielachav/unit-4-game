@@ -55,7 +55,7 @@
             </div>
 
 
-<!-- Div that has randomnumber/wins/loses/score-->
+            <!-- Div that has randomnumber/wins/loses/score-->
 
             <div id="tracker">
                 <!--Row with random number appears-->
@@ -83,9 +83,27 @@
                 </div>
             </div>
 
+            <!--Music & Audio Controls-->
 
+            <div>
+                <audio id="gamemusic">
+                    <source src="assets/audio/Carefree.mp3"
+                        type="audio/mp3">
+                </audio>
+            </div>
 
-        </div>
-    </body>
+            <div id="musicControls" class="text-center">
 
-</html>
+                <button id="playtheme"
+                    onclick="document.getElementById('gamemusic').play();">
+                    <span class="playtheme"></span> Play Theme!</button>
+
+                <button id="pausetheme"
+                    onclick="document.getElementById('gamemusic').pause();">
+                    <span class="pausetheme"></span> Pause Song</button>
+
+            </div>
+         </div>   
+        </body>
+
+    </html>
